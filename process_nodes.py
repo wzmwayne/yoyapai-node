@@ -111,10 +111,26 @@ def merge_yamls(yaml_contents):
     merged = {}
     merged["proxies"] = renamed_proxies
 
-    # Update proxy-groups to include all renamed proxy names
+    # Build set of valid proxy names after renaming
+    valid_names = set(p.get("name", "unnamed") for p in renamed_proxies)
+    valid_names.add(FAKE_PROXY_NAME)
+
+    # Special references valid in proxy-groups: built-in keywords + all group names
+    special_refs = {"DIRECT", "REJECT"}
+    for g in latest_groups:
+        if isinstance(g, dict) and "name" in g:
+            special_refs.add(g["name"])
+
+    # Rebuild proxy-groups: keep only valid proxy names + special refs
     groups = latest_groups if latest_groups else []
-    # Remove existing "说明" group if present
     groups = [g for g in groups if isinstance(g, dict) and g.get("name") != "说明"]
+
+    for g in groups:
+        if "proxies" in g and isinstance(g["proxies"], list):
+            g["proxies"] = [p for p in g["proxies"]
+                            if p in valid_names or p in special_refs]
+        if "use" in g and isinstance(g["use"], list):
+            g["use"] = [p for p in g["use"] if p in valid_names]
 
     # Ensure all proxies are referenced in an "all" type group
     has_all_group = any(g.get("type") == "all" for g in groups if isinstance(g, dict))
