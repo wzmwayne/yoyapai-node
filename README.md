@@ -14,7 +14,6 @@
 |------|------|
 | `newest.yaml` | 最新 Clash (Mihomo) 订阅文件 |
 | `newest.txt` | 最新 V2Ray 订阅文件 |
-| `full.yaml` | 所有文章合并去重后的完整 Clash 订阅文件 |
 | `scraper.py` | 抓取全部文章列表，提取节点订阅链接 |
 | `process_nodes.py` | 下载节点文件，添加说明性假节点，保存到仓库 |
 | `.github/workflows/scrape.yml` | GitHub Actions 工作流配置 |
@@ -35,14 +34,6 @@ https://raw.githubusercontent.com/wzmwayne/yoyapai-node/main/newest.yaml
 
 ```
 https://raw.githubusercontent.com/wzmwayne/yoyapai-node/main/newest.txt
-```
-
-### 完整合并订阅（Clash）
-
-`full.yaml` 汇总了所有历史文章中的节点并自动去重，适合需要更多节点选择的场景：
-
-```
-https://raw.githubusercontent.com/wzmwayne/yoyapai-node/main/full.yaml
 ```
 
 ## 节点说明
@@ -69,9 +60,7 @@ GitHub Actions 定时触发 (09:00 CST)
   │ 1. 下载 .yaml / .txt 文件       │
   │ 2. YAML: 追加假 proxy + group   │
   │ 3. TXT: 追加假 vmess:// 链接    │
-  │ 4. 下载全部历史 .yaml 文件      │
-  │ 5. 合并去重 → full.yaml         │
-  │ 6. 保存 newest.yaml / .txt      │
+  │ 4. 保存 newest.yaml / .txt      │
   └─────────────────────────────────┘
         │
         ▼
@@ -87,7 +76,7 @@ python scraper.py
 python process_nodes.py
 ```
 
-运行后会生成 `newest.yaml`、`newest.txt` 和 `full.yaml`。
+运行后会生成 `newest.yaml` 和 `newest.txt`。
 
 ## License
 

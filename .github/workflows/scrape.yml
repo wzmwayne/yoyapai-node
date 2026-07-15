@@ -35,6 +35,6 @@ jobs:
           git stash
           git pull --rebase
           git stash pop
-          git add newest.yaml newest.txt full.yaml
+          git add newest.yaml newest.txt
           git diff --cached --quiet || git commit -m "update: $(TZ=Asia/Shanghai date +%Y-%m-%d) 节点订阅"
           git push
