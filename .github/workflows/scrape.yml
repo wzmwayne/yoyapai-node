@@ -32,6 +32,7 @@ jobs:
         run: |
           git config user.name "yoyapai-bot"
           git config user.email "bot@yoyapai.com"
-          git add newest.yaml newest.txt
+          git pull --rebase
+          git add newest.yaml newest.txt full.yaml
           git diff --cached --quiet || git commit -m "update: $(TZ=Asia/Shanghai date +%Y-%m-%d) 节点订阅"
           git push
