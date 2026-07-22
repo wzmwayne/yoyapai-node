@@ -24,14 +24,30 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇮🇷 伊朗伊朗丨yoyapai.com
-  type: vless
-  server: fn.fifapes.monster
-  port: 2090
-  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
-  tls: false
-  client-fingerprint: chrome
+- name: 香港丨yoyapai.com
+  type: vmess
+  server: 221.204.41.88
+  port: 443
+  uuid: 1c503beb-4589-409b-bddf-5190925f72f0
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
+  servername: speeches-obligations-view-epinions.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: 1c503beb-4589-409b-bddf-5190925f72f0-vm
+    headers:
+      Host: speeches-obligations-view-epinions.trycloudflare.com
+  udp: true
+- name: 日本丨yoyapai.com
+  type: trojan
+  server: 95.40.51.248
+  port: 38937
+  password: b490740312aedb5f9f6b84c7aebd08c0
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+  tls: true
   udp: true
 - name: 美国丨yoyapai.com
   type: vless
@@ -47,15 +63,6 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
   skip-cert-verify: true
-  udp: true
-- name: 日本丨yoyapai.com
-  type: trojan
-  server: 95.40.51.248
-  port: 38937
-  password: b490740312aedb5f9f6b84c7aebd08c0
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-  tls: true
   udp: true
 - name: FR法國丨yoyapai.com
   type: vless
@@ -191,6 +198,17 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
   skip-cert-verify: true
+  udp: true
+- name: 荷兰丨yoyapai.com
+  type: trojan
+  server: 188.164.248.122
+  port: 443
+  password: c206d543-023d-46cc-9d5a-1f0f2fc16323
+  sni: space.byu.id.yxls.eu.cc
+  skip-cert-verify: true
+  tls: true
+  ws-opts:
+    path: /in-pdr
   udp: true
 - name: 🇺🇸US美國丨yoyapai.com_2
   type: vless
@@ -1041,6 +1059,31 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
+- name: 美国丨yoyapai.com_2
+  type: vless
+  server: fn.fifapes.monster
+  port: 2090
+  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇮🇷 伊朗伊朗丨yoyapai.com
+  type: vless
+  server: fn.fifapes.monster
+  port: 2090
+  uuid: eab915bc-d2df-73d1-47d0-6eb240497055
+  tls: false
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  udp: true
+- name: 英国丨yoyapai.com
+  type: vless
+  server: 31.192.244.42
+  port: 12683
+  uuid: 8c8d8180-a2c5-4478-a86e-4117f841e88e
+  tls: false
+  skip-cert-verify: true
+  udp: true
 - name: 新加坡丨yoyapai.com
   type: vless
   server: cf4.danfeng.eu.org
@@ -1483,7 +1526,7 @@ proxies:
       Host: vms.lifetime59.workers.dev
   skip-cert-verify: true
   udp: true
-- name: 香港丨yoyapai.com
+- name: 香港丨yoyapai.com_1
   type: trojan
   server: au-4.tr202605.com
   port: 443
@@ -2586,7 +2629,7 @@ proxies:
       Host: max-gb1.global.ssl.fastly.net
   skip-cert-verify: true
   udp: true
-- name: 香港丨yoyapai.com_1
+- name: 香港丨yoyapai.com_2
   type: vless
   server: 151.101.77.151
   port: 80
@@ -3466,7 +3509,7 @@ proxies:
   ws-opts:
     path: /assignment
   udp: true
-- name: 美国丨yoyapai.com_2
+- name: 美国丨yoyapai.com_3
   type: trojan
   server: 18.166.58.27
   port: 49277
@@ -3475,7 +3518,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-- name: 美国丨yoyapai.com_3
+- name: 美国丨yoyapai.com_4
   type: trojan
   server: 18.162.155.166
   port: 49277
@@ -3502,7 +3545,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-- name: 香港丨yoyapai.com_2
+- name: 香港丨yoyapai.com_3
   type: trojan
   server: 18.162.155.166
   port: 47867
@@ -3524,9 +3567,9 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -3536,6 +3579,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -3593,6 +3637,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -3629,7 +3676,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -3735,7 +3782,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -3807,17 +3854,17 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -3827,6 +3874,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -3884,6 +3932,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -3920,7 +3971,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -4026,7 +4077,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -4098,11 +4149,11 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -4112,9 +4163,9 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -4124,6 +4175,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -4181,6 +4233,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -4217,7 +4272,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -4323,7 +4378,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -4395,19 +4450,19 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
 - name: 📲 电报信息
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -4417,6 +4472,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -4474,6 +4530,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -4510,7 +4569,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -4616,7 +4675,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -4688,19 +4747,19 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -4710,6 +4769,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -4767,6 +4827,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -4803,7 +4866,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -4909,7 +4972,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -4981,19 +5044,19 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -5003,6 +5066,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -5060,6 +5124,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -5096,7 +5163,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -5202,7 +5269,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -5274,11 +5341,11 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -5301,9 +5368,9 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 🇮🇷 伊朗伊朗丨yoyapai.com
-  - 美国丨yoyapai.com
+  - 香港丨yoyapai.com
   - 日本丨yoyapai.com
+  - 美国丨yoyapai.com
   - FR法國丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com
   - FR法國丨yoyapai.com_1
@@ -5313,6 +5380,7 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_1
   - FR法國丨yoyapai.com_2
   - FR法國丨yoyapai.com_3
+  - 荷兰丨yoyapai.com
   - 🇺🇸US美國丨yoyapai.com_2
   - CA加拿大丨yoyapai.com_2
   - 🇺🇸US美國丨yoyapai.com_3
@@ -5370,6 +5438,9 @@ proxy-groups:
   - CA加拿大丨yoyapai.com_27
   - CA加拿大丨yoyapai.com_28
   - 日本丨yoyapai.com_1
+  - 美国丨yoyapai.com_2
+  - 🇮🇷 伊朗伊朗丨yoyapai.com
+  - 英国丨yoyapai.com
   - 新加坡丨yoyapai.com
   - 美國節點丨yoyapai.com
   - 英國
@@ -5406,7 +5477,7 @@ proxy-groups:
   - 德國丨yoyapai.com_1
   - 美國節點丨yoyapai.com_1
   - 英國丨yoyapai.com_1
-  - 香港丨yoyapai.com
+  - 香港丨yoyapai.com_1
   - 亞太地區
   - 亞太地區_1
   - 香港
@@ -5512,7 +5583,7 @@ proxy-groups:
   - NL荷兰+阿姆斯特丹丨yoyapai.com
   - 歐盟丨yoyapai.com_2
   - 日本東京丨yoyapai.com
-  - 香港丨yoyapai.com_1
+  - 香港丨yoyapai.com_2
   - 日本丨yoyapai.com_2
   - 日本東京丨yoyapai.com_1
   - 日本東京丨yoyapai.com_2
@@ -5584,11 +5655,11 @@ proxy-groups:
   - 🇷🇺俄羅斯丨yoyapai.com
   - 美國丨yoyapai.com_22
   - 美國丨yoyapai.com_23
-  - 美国丨yoyapai.com_2
   - 美国丨yoyapai.com_3
+  - 美国丨yoyapai.com_4
   - 日本丨yoyapai.com_3
   - 日本丨yoyapai.com_4
-  - 香港丨yoyapai.com_2
+  - 香港丨yoyapai.com_3
 - name: 说明
   type: select
   proxies:
