@@ -2,7 +2,7 @@ name: 每日抓取免费节点
 
 on:
   schedule:
-    - cron: '0 1 * * *'        # UTC 01:00 = 北京时间 09:00
+    - cron: '00 23 * * *'    
   workflow_dispatch:             # 手动触发
 
 jobs:
